@@ -95,6 +95,11 @@ def analyzeafter():
         positive=(len(df[df.Sentiment>0]) / total) *100
         negative=(len(df[df.Sentiment<0]) / total) *100
         neutral= 100- (positive+negative)
+        
+        positive=round(positive,2)
+        negative= round(negative,2)
+        neutral=round(neutral,2)
+        
         #print(df.head())
         #print(total)
         print(positive)
